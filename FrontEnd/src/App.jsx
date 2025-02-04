@@ -5,8 +5,8 @@ import Adsign from './components/Admin/Adsign'
 function App() {
   return (
     <div>
-      <Adsign />
-      <Adlogin />
+      {/* <Adsign />
+      <Adlogin /> */}
       <Landing/>
       
     </div>
