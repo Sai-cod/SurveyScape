@@ -3,7 +3,7 @@ import React from 'react';
 function Adlogin() {
   return (
     <div id="login-back" className="w-full h-screen bg-gradient-to-r from-[#141e30] to-[#243b55] flex justify-center items-center">
-      <div className="adlogcard w-[90%] md:w-[400px] bg-[#1c1c1c88] backdrop-blur-lg rounded-[20px] p-8">
+      <div className="adlogcard w-[90%] md:w-[400px] bg-transparent backdrop-blur-lg rounded-[20px] p-8">
         <h1 className="text-4xl text-white text-center">Log In</h1>
         <form className="w-full mt-8 flex flex-col space-y-6">
           <input

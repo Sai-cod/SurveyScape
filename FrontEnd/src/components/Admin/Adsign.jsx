@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
 
-function Adsign() {
-  const [email, setemail] = useState("");
-  const [username, setusername] = useState("");
-  const [pass, setpass] = useState("");
-  const object = {username, email, pass};
-  const handleSubmit = (e)=>{
+
+function Adsign({getData}) {
+  
+  const [userDet, setuserDet] = useState({username: "", email: "", pass: ""})
+  const submitHandler = (e)=>{
     e.preventDefault();
-    
+    getData(userDet);
   }
   return (
     <div id="sign-back" className="w-full h-screen bg-gradient-to-r from-[#141e30] to-[#243b55] flex justify-center items-center">
       <div className="sigcard w-[90%] md:w-[400px] bg-[#1c1c1c88] backdrop-blur-lg rounded-[20px] p-8">
         <h1 className="text-4xl text-white text-center">Sign Up</h1>
         <form onSubmit={(e)=>{
-          handleSubmit(e);
+          submitHandler(e);
         }} 
         className="w-full mt-8 flex flex-col space-y-6">
           <input onChange={(e)=>{
-            setusername(e.target.value);
+            setuserDet({...userDet, username: e.target.value});
           }}
             className="w-full h-[50px] rounded-full placeholder:text-white bg-[#ffffff22] text-white px-5 text-lg outline-none focus:ring-2 focus:ring-[#3ac47d]"
             type="text"
@@ -26,7 +25,7 @@ function Adsign() {
           />
           <input
             onChange={(e)=>{
-              setemail(e.target.value);
+              setuserDet({...userDet, email: e.target.value});
             }}
             className="w-full h-[50px] rounded-full placeholder:text-white bg-[#ffffff22] text-white px-5 text-lg outline-none focus:ring-2 focus:ring-[#3ac47d]"
             type="email"
@@ -34,7 +33,7 @@ function Adsign() {
           />
           <input
              onChange={(e)=>{
-              setpass(e.target.value);
+              setuserDet({...userDet, pass: e.target.value});
             }}
             className="w-full h-[50px] rounded-full placeholder:text-white bg-[#ffffff22] text-white px-5 text-lg outline-none focus:ring-2 focus:ring-[#3ac47d]"
             type="password"

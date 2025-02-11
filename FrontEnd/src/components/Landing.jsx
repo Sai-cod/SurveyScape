@@ -4,8 +4,8 @@ function Landing() {
   return (
     <div className='mainlanding w-full h-screen bg-[#FFD800] relative overflow-y-hidden'>
 
-      <div className='vid absolute right-5 top-[30%]'>
-          <img className='w-[800px] h-[700px] object-cover' src="/tenor.gif" alt = "Landing"></img>
+      <div className='hidden lg:block vid absolute right-5 top-[15%]'>
+          <img className='w-[700px] h-[700px] object-cover' src="/tenor.gif" alt = "Landing"></img>
       </div>
 
       <div className='w-full px-5 lg:px-10 py-5 flex items-center justify-between'>
@@ -38,7 +38,7 @@ function Landing() {
         <div className='bg-sky-100 rounded-lg p-6 shadow-lg transform rotate-3'>
           <div className='w-[300px] h-[200px] bg-white rounded-md mb-4'></div>
           <div className='w-[200px] h-4 bg-sky-200 rounded-full mb-2'></div>
-          <div className='w-[250px] h-4 bg-sky-200 rounded-full'></div>
+          <div className='w-[250px] h-4 bg-sky-200 rounded-full'></div>   
         </div>
       </div> */}
 
